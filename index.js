@@ -57,6 +57,31 @@ let concesionaria = {
          let puedeComprar = this.puedeComprar(autosV,personaN);
          let nArray =[];
           for (let i = 0; i < autosV.length; i++) {
+            if (this.puedeComprar(autosV[i],personaN) == true){
+                nArray.push(autosV[i]); 
+             }       
+         }
+         return nArray;
+
+      } 
+}
+
+
+console.log(concesionaria.autosQuePuedeComprar({capacidadDePagoEnCuotas: 30000, capacidadDePagoTotal: 100000000 }));
+
+/*
+
+//console.log(concesionaria.autosQuePuedeComprar({capacidadDePagoEnCuotas: 30000, capacidadDePagoTotal: 100000000 }));
+
+//buscarAutos("JJK116")
+//console.log(autosI);
+//console.log(concesionaria.autos);
+
+autosQuePuedeComprar: function(personaN){
+         let autosV = this.autosParaLaVenta();
+         let puedeComprar = this.puedeComprar(autosV,personaN);
+         let nArray =[];
+          for (let i = 0; i < autosV.length; i++) {
             // console.log(autosV[i])
             if (this.puedeComprar(autosV[i],personaN) == true){
                 nArray.push(autosV[i]); 
@@ -68,38 +93,6 @@ let concesionaria = {
          })
          return resultado
 
-         //nArray.forEach(function(dato){
-            //console.log(dato);
-         //})
-         //let prueba = nArray.filter(function (){
-
-         //})
-         //return nArray.forEach(function(dato){
-            //console.log(dato);
-         //});
-      } 
-}
-
-
-console.log(concesionaria.autosQuePuedeComprar({capacidadDePagoEnCuotas: 30000, capacidadDePagoTotal: 100000000 }));
-//console.log(concesionaria.autosQuePuedeComprar({capacidadDePagoEnCuotas: 30000, capacidadDePagoTotal: 100000000 }));
-
-//buscarAutos("JJK116")
-//console.log(autosI);
-//console.log(concesionaria.autos);
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 // let autos = require("./autos"); 
 // const concesionaria = {
 //        autos: autos
